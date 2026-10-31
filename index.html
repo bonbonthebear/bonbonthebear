@@ -12,16 +12,16 @@
 <style>
 /* Layout: a showroom walk-through. Storefront first, then the floor (collection), the workbench (configurator), the timber rack (wood guide), the road (visit). */
 :root{
-  --paper:#f2f1ea;      /* lime-washed wall, faint green bias */
-  --paper-2:#e7e6dc;
-  --ink:#16302f;        /* deep teal from the shop sign, darkened */
-  --ink-soft:#4d6260;
-  --sign:#1c8f95;       /* AL AMEEN sign teal */
-  --teak:#a8632a;       /* honey teak */
-  --teak-deep:#7a4219;
-  --line:#cfd0c4;
-  --card:#fbfaf5;
-  --on-ink:#f2f1ea;
+  --paper:#ead7b9;      /* light oak */
+  --paper-2:#ddc49f;
+  --ink:#3a2315;        /* walnut */
+  --ink-soft:#6b4a33;
+  --sign:#7c3a17;       /* rosewood */
+  --teak:#93521f;       /* teak */
+  --teak-deep:#6a3814;
+  --line:#c8a87e;
+  --card:#f4e7d0;
+  --on-ink:#f4e7d0;
   --display:"Gloock","Iowan Old Style","Georgia",serif;
   --body:"Manrope","Segoe UI",system-ui,sans-serif;
   --ml:"Noto Serif Malayalam","Kartika","Noto Sans Malayalam",serif;
@@ -29,16 +29,14 @@
   --r:6px;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --paper:#0f1a1a; --paper-2:#152323; --ink:#e9e7dc; --ink-soft:#a3b2ae; --sign:#45c1c6;
-  --teak:#d58a46; --teak-deep:#e6a565; --line:#2a3a39; --card:#132120; --on-ink:#0f1a1a; color-scheme:dark}}
+  --paper:#23160e; --paper-2:#301f13; --ink:#f1e0c4; --ink-soft:#c6a785; --sign:#e3a867; --teak:#d58a46; --teak-deep:#b8722f; --line:#4b3222; --card:#2c1c11; --on-ink:#23160e; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --paper:#0f1a1a; --paper-2:#152323; --ink:#e9e7dc; --ink-soft:#a3b2ae; --sign:#45c1c6;
-  --teak:#d58a46; --teak-deep:#e6a565; --line:#2a3a39; --card:#132120; --on-ink:#0f1a1a; color-scheme:dark}
+  --paper:#23160e; --paper-2:#301f13; --ink:#f1e0c4; --ink-soft:#c6a785; --sign:#e3a867; --teak:#d58a46; --teak-deep:#b8722f; --line:#4b3222; --card:#2c1c11; --on-ink:#23160e; color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;margin:0}
+body{background-color:var(--paper);background-image:repeating-linear-gradient(91deg,color-mix(in srgb,var(--teak) 7%,transparent) 0 2px,transparent 2px 11px,color-mix(in srgb,var(--teak-deep) 6%,transparent) 11px 12px,transparent 12px 27px,color-mix(in srgb,var(--teak) 4%,transparent) 27px 31px,transparent 31px 46px);color:var(--ink);font-family:var(--body);font-size:var(--step-0);line-height:1.6;margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--sign);outline-offset:3px;border-radius:3px}
@@ -75,7 +73,7 @@ nav.links a:hover{color:var(--ink)}
 .facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.88rem;color:var(--ink-soft)}
 .facts strong{display:block;color:var(--ink);font-size:1rem}
 .photo-stack{position:relative;min-width:0}
-.photo-main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;max-width:100%;box-shadow:0 30px 60px -30px rgba(10,30,30,.45)}
+.photo-main{border-radius:var(--r);overflow:hidden;aspect-ratio:4/3;max-width:100%;box-shadow:0 30px 60px -30px rgba(40,20,8,.55)}
 .photo-main img,.photo-side img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
 .photo-main:hover img{transform:scale(1.04)}
 .photo-side{position:absolute;right:-14px;bottom:-34px;width:34%;aspect-ratio:3/5;border-radius:var(--r);overflow:hidden;border:5px solid var(--paper);box-shadow:0 20px 40px -20px rgba(10,30,30,.5)}
